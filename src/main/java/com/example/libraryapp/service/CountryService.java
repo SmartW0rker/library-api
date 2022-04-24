@@ -12,4 +12,5 @@ public interface CountryService {
     Country delete(Long id);
     Optional<Country> save(CountryDto countryDto);
     Optional<Country> edit(Long id,CountryDto countryDto);
+    Country findByName(String name);
 }

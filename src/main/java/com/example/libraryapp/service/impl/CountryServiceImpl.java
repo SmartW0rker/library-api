@@ -52,4 +52,9 @@ public class CountryServiceImpl implements CountryService {
         countryRepository.save(country);
         return Optional.of(country);
     }
+
+    @Override
+    public Country findByName(String name) {
+        return countryRepository.findByName(name).stream().findFirst().orElse(null);
+    }
 }

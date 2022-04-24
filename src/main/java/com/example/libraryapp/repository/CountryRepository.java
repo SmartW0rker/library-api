@@ -14,4 +14,5 @@ public interface CountryRepository extends JpaRepository<Country,Long> {
 
     @Override
     Optional<Country> findById(Long aLong);
+    List<Country> findByName(String name);
 }
